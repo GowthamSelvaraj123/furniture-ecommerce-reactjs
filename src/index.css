@@ -126,7 +126,7 @@ a {
         font-size: 54px; } }
   .hero p {
     color: rgba(255, 255, 255, 0.5);
-    margin-botom: 30px; }
+    margin-bottom: 30px; }
   .hero .hero-img-wrap {
     position: relative; }
     .hero .hero-img-wrap img {
@@ -156,7 +156,7 @@ a {
       position: absolute;
       width: 255px;
       height: 217px;
-      background-image: url("../images/dots-light.svg");
+      background-image: url("/dots-light.svg");
       background-size: contain;
       background-repeat: no-repeat;
       right: -100px;
@@ -285,7 +285,7 @@ button.btn, .btn, a.btn {
       content: "";
       width: 255px;
       height: 217px;
-      background-image: url("src/assets/dots-yellow.svg");
+      background-image: url("/dots-yellow.svg");
       background-repeat: no-repeat;
       background-size: contain;
       -webkit-transform: translate(-40%, -40%);
@@ -331,7 +331,7 @@ button.btn, .btn, a.btn {
       content: "";
       width: 255px;
       height: 217px;
-      background-image: url("src/assets/dots-green.svg");
+      background-image: url("/dots-green.svg");
       background-size: contain;
       background-repeat: no-repeat;
       -webkit-transform: translate(-40%, -40%);

@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Header from './components/Layout/Header'
 import Home from './page/Home'
 import Shop from './page/Shop'

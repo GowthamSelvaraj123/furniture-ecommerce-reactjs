@@ -2,14 +2,14 @@ import Card from "../UI/icon-card/Card";
 export default function IconRepeater()
 {
   const cardLists = [
-        {img:'src/assets/truck.svg', title:'Fast Free Shipping', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'}, 
-        {img:'src/assets/bag.svg', title:'Easy to Shop', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
-        {img:'src/assets/support.svg', title:'24/7 Support', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
-        {img:'src/assets/return.svg', title:'Hassle Free Returns', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
-        {img:'src/assets/truck.svg', title:'Fast Free Shipping', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'}, 
-        {img:'src/assets/bag.svg', title:'Easy to Shop', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
-        {img:'src/assets/support.svg', title:'24/7 Support', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
-        {img:'src/assets/return.svg', title:'Hassle Free Returns', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},]
+        {img:'/truck.svg', title:'Fast Free Shipping', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'}, 
+        {img:'/bag.svg', title:'Easy to Shop', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
+        {img:'/support.svg', title:'24/7 Support', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
+        {img:'/return.svg', title:'Hassle Free Returns', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
+        {img:'/truck.svg', title:'Fast Free Shipping', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'}, 
+        {img:'/bag.svg', title:'Easy to Shop', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
+        {img:'/support.svg', title:'24/7 Support', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},
+        {img:'/return.svg', title:'Hassle Free Returns', description:'Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.'},]
 
   return(    
     <>

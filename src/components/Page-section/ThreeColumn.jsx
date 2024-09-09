@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default function ThreeColumn()
 {
     const productLists = [
-        {img:'src/assets/product-1.png', title:'Nordic Chair', price:'$50.00'}, 
-        {img:'src/assets/product-2.png', title:'Kruzo Aero Chair', price:'$78.00'},
-        {img:'src/assets/product-3.png', title:'Ergonomic Chair', price:'$43.00'},
+        {img:'/product-1.png', title:'Nordic Chair', price:'$50.00'}, 
+        {img:'/product-2.png', title:'Kruzo Aero Chair', price:'$78.00'},
+        {img:'/product-3.png', title:'Ergonomic Chair', price:'$43.00'},
     ]
     return(
         <div className="product-section">

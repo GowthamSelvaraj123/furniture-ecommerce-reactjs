@@ -14,7 +14,7 @@ return(<div className="hero">
         </div>
         <div className="col-lg-7">
             <div className="hero-img-wrap">
-                <img src="src/assets/couch.png" className="img-fluid" />
+                <img src="/couch.png" className="img-fluid" />
             </div>
         </div>
     </div>

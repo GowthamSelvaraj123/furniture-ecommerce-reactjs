@@ -15,9 +15,9 @@ export default function TwoColumn()
 				<div className="row justify-content-between">
 					<div className="col-lg-7 mb-5 mb-lg-0">
 						<div className="imgs-grid">
-							<div className="grid grid-1"><img src="src/assets/img-grid-1.jpg" alt="Untree.co" /></div>
-							<div className="grid grid-2"><img src="src/assets/img-grid-2.jpg" alt="Untree.co" /></div>
-							<div className="grid grid-3"><img src="src/assets/img-grid-3.jpg" alt="Untree.co" /></div>
+							<div className="grid grid-1"><img src="/img-grid-1.jpg" alt="Untree.co" /></div>
+							<div className="grid grid-2"><img src="/img-grid-2.jpg" alt="Untree.co" /></div>
+							<div className="grid grid-3"><img src="/img-grid-3.jpg" alt="Untree.co" /></div>
 						</div>
 					</div>
 					<div className="col-lg-5 pl-lg-5">

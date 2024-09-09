@@ -2,10 +2,10 @@ import TeamCard from "../UI/team-card/TeamCard";
 
 export default function OurTeam() {
     const teamDatas = [
-        {img:"src/assets/person_1.jpg",title:'Lawson Arnold', meta:'CEO, Founder, Atty.', description:'Separated they live in.Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
-        {img:"src/assets/person_2.jpg",title:'Jeremy Walker', meta:'CEO, Founder, Atty.', description:'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
-        {img:"src/assets/person_3.jpg",title:'Patrik White', meta:'CEO, Founder, Atty.', description:'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
-        {img:"src/assets/person_4.jpg",title:'Patrik White', meta:'CEO, Founder, Atty.', description:'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
+        {img:"/person_1.jpg",title:'Lawson Arnold', meta:'CEO, Founder, Atty.', description:'Separated they live in.Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
+        {img:"/person_2.jpg",title:'Jeremy Walker', meta:'CEO, Founder, Atty.', description:'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
+        {img:"/person_3.jpg",title:'Patrik White', meta:'CEO, Founder, Atty.', description:'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
+        {img:"/person_4.jpg",title:'Patrik White', meta:'CEO, Founder, Atty.', description:'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'}, 
     ]
     return (
         <>

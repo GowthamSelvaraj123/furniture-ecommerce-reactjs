@@ -21,9 +21,9 @@ export default function Header()
                         <NavBar menus={menuLists}></NavBar>
                 <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                     <li>
-                    <Link to="/profile" className= "nav-link"><img src="src/assets/user.svg" /></Link></li>
+                    <Link to="/profile" className= "nav-link"><img src="/user.svg" /></Link></li>
                     <li>
-                    <Link to="/cart" className= "nav-link"><img src="src/assets/cart.svg" /></Link></li>
+                    <Link to="/cart" className= "nav-link"><img src="/cart.svg" /></Link></li>
                 </ul>
 
                     </div>

@@ -1,9 +1,9 @@
 import ImgCard from "../UI/img-card/ImgCard";
 export default function CardRepeater() {
     const cardDatas = [
-        {image:'src/assets/product-1.png', title:'Nordic Chair', description:'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio', link:'#'},
-        {image:'src/assets/product-2.png', title:'Kruzo Aero Chair', description:'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio', link:'#'},
-        {image:'src/assets/product-3.png', title:'Ergonomic Chair', description:'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio', link:'#'},
+        {image:'/product-1.png', title:'Nordic Chair', description:'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio', link:'#'},
+        {image:'/product-2.png', title:'Kruzo Aero Chair', description:'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio', link:'#'},
+        {image:'/product-3.png', title:'Ergonomic Chair', description:'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio', link:'#'},
     ]
     return (
         <>
