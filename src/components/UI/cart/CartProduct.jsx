@@ -1,4 +1,4 @@
-export default function CartProduct({ products, cartCounts, cartPrices, incProduct, decProduct }) {
+export default function CartProduct({ products, cartCounts, cartPrices, incProduct, decProduct, remove}) {
     return (
         <>
             {products.map((product, index) => (
@@ -29,7 +29,7 @@ export default function CartProduct({ products, cartCounts, cartPrices, incProdu
                         </div>
                     </td>
                     <td>{`$${cartPrices[index].toFixed(2)}`}</td>
-                    <td><a href="#" className="btn btn-black btn-sm">Remove</a></td>
+                    <td><button onClick={() => remove(index)} className="btn btn-black btn-sm">Remove</button></td>
                 </tr>
             ))}
         </>

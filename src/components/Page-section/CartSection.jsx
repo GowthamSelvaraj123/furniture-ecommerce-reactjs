@@ -1,141 +1,151 @@
 import CartProduct from "../UI/cart/CartProduct";
 import { useState, useEffect } from "react";
 
-export default function CartSetcion() {
-  const products = [
-    {image:"/product-1.png", name:"Product 1", price:"49.00"}, 
-    {image:"/product-1.png", name:"Product 2", price:"55.00"}, 
-    {image:"/product-1.png", name:"Product 3", price:"60.00"}, 
+export default function CartSection() {
+  const initialProducts = [
+    { image: "/product-1.png", name: "Product 1", price: "49.00" },
+    { image: "/product-1.png", name: "Product 2", price: "55.00" },
+    { image: "/product-1.png", name: "Product 3", price: "60.00" },
   ];
-  
-const [cartCounts, setCartCounts] = useState(products.map(() => 1));
-const [cartPrices, setCartPrices] = useState(products.map((product) => parseFloat(product.price) || 0));
-const [subtotal, setSubtotal] = useState(0);
-const [total, setTotal] = useState(0);
 
-useEffect(() => {
-  const newSubtotal = cartPrices.reduce((acc, price) => acc + price, 0);
-  setSubtotal(newSubtotal);
-  setTotal(newSubtotal); 
-}, [cartPrices]);
+  const [products, setProducts] = useState(initialProducts);
+  const [cartCounts, setCartCounts] = useState(products.map(() => 1));
+  const [cartPrices, setCartPrices] = useState(products.map((product) => parseFloat(product.price) || 0));
+  const [subtotal, setSubtotal] = useState(0);
+  const [total, setTotal] = useState(0);
 
-function incProduct(index){
- setCartCounts((prevCounts) => {
-    const newCounts = [...prevCounts];
-    newCounts[index] += 1;
-    updateProductPrice(index, newCounts[index])
-    return newCounts;
- });
-}
-function decProduct(index)
-{
+  useEffect(() => {
+    const newSubtotal = cartPrices.reduce((acc, price) => acc + price, 0);
+    setSubtotal(newSubtotal);
+    setTotal(newSubtotal);
+  }, [cartPrices]);
+
+  function incProduct(index) {
     setCartCounts((prevCounts) => {
-        const newCounts = [...prevCounts];
-        newCounts[index] -= 1;
-        updateProductPrice(index, newCounts[index])
-        return newCounts;
-     });
-    
-}
-function updateProductPrice(index, quantity)
-{
-    setCartPrices((prevPrices) => {
-        const newPrices = [...prevPrices];
-        const basePrice = parseFloat(products[index].price);
-        if (!isNaN(basePrice)) {
-            newPrices[index] = basePrice * quantity;
-        } else {
-            console.error(`Invalid price for product at index ${index}:`, products[index].price);
-            newPrices[index] = 0;
-        }
-        return newPrices;
+      const newCounts = [...prevCounts];
+      newCounts[index] += 1;
+      updateProductPrice(index, newCounts[index]);
+      return newCounts;
     });
-}
-function inputChange()
-{
+  }
 
-}
+  function decProduct(index) {
+    setCartCounts((prevCounts) => {
+      const newCounts = [...prevCounts];
+      if (newCounts[index] > 1) {
+        newCounts[index] -= 1;
+        updateProductPrice(index, newCounts[index]);
+      }
+      return newCounts;
+    });
+  }
+
+  function updateProductPrice(index, quantity) {
+    setCartPrices((prevPrices) => {
+      const newPrices = [...prevPrices];
+      const basePrice = parseFloat(products[index].price);
+      if (!isNaN(basePrice)) {
+        newPrices[index] = basePrice * quantity;
+      } else {
+        console.error(`Invalid price for product at index ${index}:`, products[index].price);
+        newPrices[index] = 0;
+      }
+      return newPrices;
+    });
+  }
+
+  function remove(index) {
+    setProducts((prevProducts) => prevProducts.filter((_, i) => i !== index));
+    setCartCounts((prevCounts) => prevCounts.filter((_, i) => i !== index));
+    setCartPrices((prevPrices) => prevPrices.filter((_, i) => i !== index));
+  }
+
   return (
     <>
-      <div class="untree_co-section before-footer-section">
-        <div class="container">
-          <div class="row mb-5">
-            <form class="col-md-12" method="post">
-              <div class="site-blocks-table">
-                <table class="table">
+      <div className="untree_co-section before-footer-section">
+        <div className="container">
+          <div className="row mb-5">
+            <form className="col-md-12" method="post">
+              <div className="site-blocks-table">
+                <table className="table">
                   <thead>
                     <tr>
-                      <th class="product-thumbnail">Image</th>
-                      <th class="product-name">Product</th>
-                      <th class="product-price">Price</th>
-                      <th class="product-quantity">Quantity</th>
-                      <th class="product-total">Total</th>
-                      <th class="product-remove">Remove</th>
+                      <th className="product-thumbnail">Image</th>
+                      <th className="product-name">Product</th>
+                      <th className="product-price">Price</th>
+                      <th className="product-quantity">Quantity</th>
+                      <th className="product-total">Total</th>
+                      <th className="product-remove">Remove</th>
                     </tr>
                   </thead>
                   <tbody>
-                      <CartProduct products={products}
-                      cartCounts={cartCounts} 
-                      cartPrices={cartPrices} 
-                      incProduct={incProduct} 
-                      decProduct={decProduct}></CartProduct>
+                    <CartProduct
+                      products={products}
+                      cartCounts={cartCounts}
+                      cartPrices={cartPrices}
+                      incProduct={incProduct}
+                      decProduct={decProduct}
+                      remove={remove}
+                    />
                   </tbody>
                 </table>
               </div>
             </form>
           </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="row mb-5">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <button class="btn btn-black btn-sm btn-block">Update Cart</button>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="row mb-5">
+                <div className="col-md-6 mb-3 mb-md-0">
+                  <button className="btn btn-black btn-sm btn-block">Update Cart</button>
                 </div>
-                <div class="col-md-6">
-                  <button class="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
+                <div className="col-md-6">
+                  <button className="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <label class="text-black h4" for="coupon">Coupon</label>
+              <div className="row">
+                <div className="col-md-12">
+                  <label className="text-black h4" htmlFor="coupon">
+                    Coupon
+                  </label>
                   <p>Enter your coupon code if you have one.</p>
                 </div>
-                <div class="col-md-8 mb-3 mb-md-0">
-                  <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code" />
+                <div className="col-md-8 mb-3 mb-md-0">
+                  <input type="text" className="form-control py-3" id="coupon" placeholder="Coupon Code" />
                 </div>
-                <div class="col-md-4">
-                  <button class="btn btn-black">Apply Coupon</button>
+                <div className="col-md-4">
+                  <button className="btn btn-black">Apply Coupon</button>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 pl-5">
-              <div class="row justify-content-end">
-                <div class="col-md-7">
-                  <div class="row">
-                    <div class="col-md-12 text-right border-bottom mb-5">
-                      <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+            <div className="col-md-6 pl-5">
+              <div className="row justify-content-end">
+                <div className="col-md-7">
+                  <div className="row">
+                    <div className="col-md-12 text-right border-bottom mb-5">
+                      <h3 className="text-black h4 text-uppercase">Cart Totals</h3>
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-md-6">
-                      <span class="text-black">Subtotal</span>
+                  <div className="row mb-3">
+                    <div className="col-md-6">
+                      <span className="text-black">Subtotal</span>
                     </div>
-                    <div class="col-md-6 text-right">
-                      <strong class="text-black">${subtotal.toFixed(2)}</strong>
+                    <div className="col-md-6 text-right">
+                      <strong className="text-black">${subtotal.toFixed(2)}</strong>
                     </div>
                   </div>
-                  <div class="row mb-5">
-                    <div class="col-md-6">
-                      <span class="text-black">Total</span>
+                  <div className="row mb-5">
+                    <div className="col-md-6">
+                      <span className="text-black">Total</span>
                     </div>
-                    <div class="col-md-6 text-right">
-                      <strong class="text-black">${total.toFixed(2)}</strong>
+                    <div className="col-md-6 text-right">
+                      <strong className="text-black">${total.toFixed(2)}</strong>
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-md-12">
-                      <button class="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</button>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <button className="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</button>
                     </div>
                   </div>
                 </div>
@@ -144,7 +154,6 @@ function inputChange()
           </div>
         </div>
       </div>
-
     </>
-  )
+  );
 }
