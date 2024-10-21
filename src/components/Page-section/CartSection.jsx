@@ -1,7 +1,10 @@
 import CartProduct from "../UI/cart/CartProduct";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function CartSection() {
+  const navigate = useNavigate();
   const initialProducts = [
     { image: "/product-1.png", name: "Product 1", price: "49.00" },
     { image: "/product-1.png", name: "Product 2", price: "55.00" },
@@ -59,7 +62,16 @@ export default function CartSection() {
     setCartCounts((prevCounts) => prevCounts.filter((_, i) => i !== index));
     setCartPrices((prevPrices) => prevPrices.filter((_, i) => i !== index));
   }
-
+  function proceedToCheckout() {
+    const cartDetails = {
+      products,
+      cartCounts,
+      cartPrices,
+      subtotal,
+      total,
+    };
+    navigate('/checkout', { state: cartDetails });
+  }
   return (
     <>
       <div className="untree_co-section before-footer-section">
@@ -145,7 +157,7 @@ export default function CartSection() {
 
                   <div className="row">
                     <div className="col-md-12">
-                      <button className="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</button>
+                      <button className="btn btn-black btn-lg py-3 btn-block" onClick={proceedToCheckout}>Proceed To Checkout</button>
                     </div>
                   </div>
                 </div>
