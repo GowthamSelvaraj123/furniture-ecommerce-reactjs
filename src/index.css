@@ -104,7 +104,9 @@ a {
 
 .hero {
   background: #3b5d50;
-  padding: calc(4rem - 30px) 0 0rem 0; }
+  padding: calc(4rem - 30px) 0 0rem 0;
+  margin-top: 70px; }
+  
   @media (min-width: 768px) {
     .hero {
       padding: calc(4rem - 30px) 0 4rem 0; } }
@@ -323,7 +325,7 @@ button.btn, .btn, a.btn {
   .we-help-section .imgs-grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[27];
+    -ms-grid-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(27, 1fr);
     position: relative; }
     .we-help-section .imgs-grid:before {
@@ -723,3 +725,21 @@ textarea {
   }
 
 .untree_co-section a{color:black;}
+
+.custom-navbar {
+  background-color: #343a40; 
+  z-index: 1000; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.custom-navbar.scrolling {
+  background-color: rgba(0, 0, 0, 0.8); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
