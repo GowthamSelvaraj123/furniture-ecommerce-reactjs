@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 export default function ContactDetailsForm() {
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');
