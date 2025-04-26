@@ -1,8 +1,26 @@
-# React + Vite
+# Furniture eCommerce Website (React.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete furniture eCommerce website built by converting an HTML template into a modular React.js application. This project demonstrates how to turn static content into a dynamic, scalable frontend using reusable components and modern React practices.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Home, Shop, Product Detail, Cart, Checkout Pages
+- Fully responsive design
+- Reusable React components (Header, Footer, ProductCard, etc.)
+- Props-based product rendering
+- React Router for navigation
+- Optional: Local state cart system using `useState` or `useContext`
+
+## 🛠️ Technologies Used
+
+- React.js (with `create-react-app`)
+- React Router DOM
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- Optional: Tailwind CSS or Bootstrap (if used in template)
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/furniture-ecommerce-react.git
